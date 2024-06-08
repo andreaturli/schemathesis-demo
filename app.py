@@ -70,7 +70,7 @@ def malformed_json():
     return "{success: true}", 200, {"Content-Type": "application/json"}
 
 
-@app.route("/response-conformance/fixed-incorrect-content-type", methods=["GET"])
+@app.route("/response-conformance/incorrect-content-type", methods=["GET"])
 def incorrect_content_type():
     # This response does not conform to the OpenAPI schema
     return "Success!", 200, {"Content-Type": "application/json"}
